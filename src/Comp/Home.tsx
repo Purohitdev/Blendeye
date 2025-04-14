@@ -7,7 +7,7 @@ import BlurSection from './BlurSection';
 import Services from './Service';
 import About from './About';
 import Portfolio from './Portfolio';
-import Work from './work';
+import Work from './Work';
 import Subscription from './Subscription';
 
 
