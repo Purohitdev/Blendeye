@@ -14,6 +14,7 @@ import Team from './Team';
 import { Fa42Group } from 'react-icons/fa6';
 import FAQSection from './Faq';
 import Banner from './Banner';
+import Footer from './Footer';
 
 
 
@@ -91,6 +92,7 @@ function Home() {
       <Team/>
       <FAQSection/>
       <Banner/>
+      <Footer/>
      
       
     </>
