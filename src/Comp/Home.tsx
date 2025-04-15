@@ -9,6 +9,12 @@ import About from './About';
 import Portfolio from './Portfolio';
 import Work from './Work';
 import Subscription from './Subscription';
+import Testi from './Testi';
+import Team from './Team';
+import { Fa42Group } from 'react-icons/fa6';
+import FAQSection from './Faq';
+import Banner from './Banner';
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -81,6 +87,11 @@ function Home() {
       <Portfolio/>
       <Work />
       <Subscription/>
+      <Testi/>
+      <Team/>
+      <FAQSection/>
+      <Banner/>
+     
       
     </>
   );

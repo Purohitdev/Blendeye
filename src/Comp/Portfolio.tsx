@@ -65,7 +65,7 @@ export default function Portfolio() {
     if (!col1 || !col2) return;
 
     gsap.to(col1, {
-      y: -200, // col1 scrolls upwards
+      y: -100, // col1 scrolls upwards
       ease: 'none',
       scrollTrigger: {
         trigger: col1,
@@ -75,16 +75,16 @@ export default function Portfolio() {
       },
     });
 
-    // gsap.to(col2, {
-    //   y: 200, // col2 scrolls downwards
-    //   ease: 'none',
-    //   scrollTrigger: {
-    //     trigger: col2,
-    //     start: 'top 10%',
-    //     end: 'bottom top',
-    //     scrub: true,
-    //   },
-    // });
+    gsap.to(col2, {
+      y: 100, // col2 scrolls downwards
+      ease: 'none',
+      scrollTrigger: {
+        trigger: col2,
+        start: 'top 10%',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
 
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
