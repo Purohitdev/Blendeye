@@ -1,11 +1,32 @@
-
+import { useEffect } from "react";
+import gsap from "gsap";
+import { Draggable } from "gsap/Draggable";
 
 const Testi = () => {
   // Predefined background colors
   const bgColors = ["#EDF3A0", "#8982EE"];
 
+  useEffect(() => {
+    // Register the Draggable plugin with GSAP
+    gsap.registerPlugin(Draggable);
+
+    // Make all testimonial boxes draggable
+    document.querySelectorAll(".testimonial-card").forEach((el) => {
+      const element = el as HTMLElement;
+      Draggable.create(element, {
+        bounds: ".testimonials-container", // Restrict dragging within the parent container
+        inertia: true, // Enable inertia for smooth stopping
+        throwProps: true, // Smooth start and stop with throwProps
+        dragResistance: 0.2, // Resistance to dragging to give it a smoother feel
+        onDrag: () => {
+          // Optional: Apply custom styles or animations while dragging
+        },
+      });
+    });
+  }, []);
+
   return (
-    <section className="w-full h-screen py-16 bg-white relative flex flex-col px-8 pb-20">
+    <section className="w-full h-screen py-16 bg-white relative flex flex-col px-8 pb-20 testimonials-container">
       <h2 className="text-5xl md:text-7xl font-semibold text-left px-7">
         <span className="text-[#a3a3a3]">Here's </span>what others
         <br />
@@ -54,7 +75,7 @@ const Testi = () => {
           return (
             <div
               key={index}
-              className="absolute w-80 h-60 bg-cover bg-center rounded-xl shadow-lg p-4 flex flex-col items-center text-center text-[#2A2A2A]"
+              className="absolute w-80 h-60 bg-cover bg-center rounded-xl shadow-lg p-4 flex flex-col items-center text-center text-[#2A2A2A] testimonial-card"
               style={{
                 backgroundImage:
                   "url('https://cdn.prod.website-files.com/66547507d69d70a29b5cb91e/665d7f9b91d3b83cc07198aa_Rectangle%205.svg')",
