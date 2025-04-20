@@ -50,7 +50,7 @@ function Work() {
   const textRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   useEffect(() => {
-    cardRefs.current.forEach((card, idx) => {
+    cardRefs.current.forEach((card) => {
       if (!card) return;
 
       gsap.fromTo(
@@ -64,7 +64,6 @@ function Work() {
           scrollTrigger: {
             trigger: card,
             start: "top 65%",
-            markers:true,
             toggleActions: "play none none none",
           },
         }
