@@ -113,8 +113,8 @@ function Work() {
   return (
     <div className="relative min-h-[50vh] bg-[#2A2A2A] pb-30">
       {/* Top wave */}
-      <div className="absolute -top-8 left-0 w-full overflow-hidden">
-        <div className="wave_wrap flex w-[200%] animate-wave">
+      <div className="absolute w-full left-0 overflow-hidden -top-2 md:-top-8">
+      <div className="wave_wrap flex w-[200%] animate-wave">
           <img src={waveSrc} alt="wave" className="w-1/2 object-cover block" />
           <img src={waveSrc} alt="wave" className="w-1/2 object-cover block" />
         </div>
@@ -167,7 +167,8 @@ function Work() {
       </div>
 
       {/* Bottom wave (flipped) */}
-      <div className="absolute -bottom-8 left-0 w-full overflow-hidden rotate-180">
+      <div className="absolute -bottom-2 md:-bottom-8 left-0 w-full overflow-hidden rotate-180">
+
         <div className="wave_wrap flex w-[200%] animate-wave">
           <img src={waveSrc} alt="wave" className="w-1/2 object-cover block" />
           <img src={waveSrc} alt="wave" className="w-1/2 object-cover block" />
